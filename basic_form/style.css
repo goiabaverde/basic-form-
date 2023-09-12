@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans:wght@600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p, .input_text, .input_text_label, label{
+    font-family: 'Poppins', Arial,sans-serif;
+
+}
+
+h1{
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2f2841;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px black;
+
+
+}
+
+body{
+    background-color: #201b2c;
+    color: white;
+}
+
+.gender_inputs_area{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gender_label{
+    margin: 0px 5px;
+}
+
+.single_input_area{
+    position: relative;
+}
+
+.input_text_label{
+    position: absolute;
+    top: 15px;
+    left: 2px;
+    color: #00ff88;
+    margin-left: 5px;
+}
+
+.input_text{
+    padding: 5px 5px;
+    margin: 12px 0px;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #514869;
+  
+}
+
+.submit_input_area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+#submit_btn{
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: #058f4e;
+}
+
+.input_text::placeholder{
+    opacity: 0;
+}
+
+.input_text:focus::placeholder{
+    opacity: 1;
+}
+
+.input_text:focus , .input_text:not(:placeholder-shown) ~ .input_text_label{
+    font-size: 14px;
+    top:-10px;
+    transition: 0.3s ease-in-out;
+}
+
+.input_text:focus ~ .input_text_label{
+    font-size: 14px;
+    top:-10px;
+    transition: 0.3s ease-in-out;
+}
+
+.dob_input_area{
+    margin-top: 8px;
+}
+
+#dob_input{
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: #514869;
+}
+
+.success{
+    color: rgb(117, 241, 117);
+}
+
+.error{
+    color: rgb(203, 75, 75);
+}
+
+@media(max-width:700px) {
+    .gender_inputs_area{
+        display: grid;
+        grid-template-columns: 15px 100px;
+        justify-content: start;
+        
+    }
+}
